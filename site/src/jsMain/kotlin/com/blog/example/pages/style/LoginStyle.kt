@@ -1,5 +1,6 @@
 package com.blog.example.pages.style
 
+import com.blog.example.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors

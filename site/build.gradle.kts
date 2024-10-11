@@ -25,6 +25,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.compose.runtime)
+            compileOnly(libs.kotlinx.serializer)
         }
 
         jsMain.dependencies {
