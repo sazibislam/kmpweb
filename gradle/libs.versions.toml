@@ -3,7 +3,7 @@ jetbrains-compose = "1.6.11"
 kobweb = "0.19.2"
 kotlin = "2.0.20"
 kmongo = "5.1.0"
-serializer = "1.7.3"
+serializer = "1.4.1"
 serializerplugin = "2.0.20"
 
 [libraries]
@@ -15,7 +15,7 @@ kobweb-silk = { module = "com.varabyte.kobweb:kobweb-silk", version.ref = "kobwe
 kobweb-worker = { module = "com.varabyte.kobweb:kobweb-worker", version.ref = "kobweb" }
 kobwebx-markdown = { module = "com.varabyte.kobwebx:kobwebx-markdown", version.ref = "kobweb" }
 
-kmongo-database = { module = "org.litote.kmongo:kmongo-coroutine", version.ref = "kmongo" }
+kmongo-database = { module = "org.litote.kmongo:kmongo-coroutine-serialization", version.ref = "kmongo" }
 kotlinx-serializer = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serializer" }
 
 silk-foundation = { module = "com.varabyte.kobweb:silk-foundation", version.ref = "kobweb" }

@@ -1,12 +1,14 @@
 package com.blog.example.models
 
+import kotlinx.serialization.SerialName
+
 expect class User {
-  val _id: String
+  val id: String
   val username: String
   val password: String
 }
 
 expect class UserWithoutPassword {
-  val _id: String
+  val id: String
   val username: String
 }
