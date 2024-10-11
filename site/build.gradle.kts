@@ -25,7 +25,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.compose.runtime)
-            compileOnly(libs.kotlinx.serializer)
+            implementation(libs.kotlinx.serializer)
         }
 
         jsMain.dependencies {
@@ -33,15 +33,16 @@ kotlin {
             implementation(libs.kobweb.core)
             implementation(libs.kobweb.silk)
             implementation(libs.silk.icons.fa)
-            implementation(libs.kobwebx.markdown)
-            compileOnly(libs.kotlinx.serializer)
+            // implementation(libs.kobwebx.markdown)
+            implementation(libs.kotlinx.serializer)
 
-            implementation(project(":worker"))
+            // implementation(project(":worker"))
         }
         jvmMain.dependencies {
-            compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime
+            implementation(libs.kobweb.api) // Provided by Kobweb backend at runtime
             compileOnly(libs.kmongo.database) //db
-            compileOnly(libs.kotlinx.serializer)
+            // implementation(libs.mongodb.kotlin.driver)
+            implementation(libs.kotlinx.serializer)
         }
     }
 }

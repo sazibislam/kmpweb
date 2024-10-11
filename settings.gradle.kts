@@ -9,4 +9,4 @@ pluginManagement {
 rootProject.name = "example"
 
 include(":site")
-include(":worker")
+// include(":worker")

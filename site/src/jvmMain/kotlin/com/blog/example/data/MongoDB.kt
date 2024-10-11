@@ -22,7 +22,7 @@ fun initMongoDB(context: InitApiContext) {
   context.data.add(MongoDB(context))
 }
 
-class MongoDB (private val context: InitApiContext): MongoRepository {
+class MongoDB(private val context: InitApiContext) : MongoRepository {
 
   private val client = KMongo.createClient()
   private val database = client.getDatabase(DATABASE_NAME)
@@ -41,6 +41,17 @@ class MongoDB (private val context: InitApiContext): MongoRepository {
 
       context.logger.error(e.message.toString())
       null
+    }
+  }
+
+  override suspend fun checkUserId(id: String): Boolean {
+    return try {
+
+      val documentCount = userCollection.countDocuments(User::id eq id).awaitFirst()
+      documentCount > 0
+    } catch (e: Exception) {
+      context.logger.error(e.message.toString())
+      false
     }
   }
 }
