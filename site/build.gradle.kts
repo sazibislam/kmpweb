@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kobwebx.markdown)
+    alias(libs.plugins.serializer.plugin)
 }
 
 group = "com.blog.example"
@@ -32,10 +33,14 @@ kotlin {
             implementation(libs.kobweb.silk)
             implementation(libs.silk.icons.fa)
             implementation(libs.kobwebx.markdown)
+            compileOnly(libs.kotlinx.serializer)
+
             implementation(project(":worker"))
         }
         jvmMain.dependencies {
             compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime
+            compileOnly(libs.kmongo.database) //db
+            compileOnly(libs.kotlinx.serializer)
         }
     }
 }

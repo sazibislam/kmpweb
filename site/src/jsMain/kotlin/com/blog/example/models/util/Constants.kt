@@ -1,4 +1,4 @@
-package com.blog.example.pages.models.util
+package com.blog.example.models.util
 
 object Constants {
 

@@ -1,4 +1,4 @@
-package com.blog.example.pages.models
+package com.blog.example.models
 
 import org.jetbrains.compose.web.css.CSSColorValue
 import org.jetbrains.compose.web.css.rgb
